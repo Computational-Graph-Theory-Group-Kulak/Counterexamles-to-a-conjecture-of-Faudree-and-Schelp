@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Goedgebeur"
+  given-names: "Jan"
+- family-names: "Jooken"
+  given-names: "Jorik"
+- family-names: "Provoost"
+  given-names: "Michiel"
+- family-names: "Zamfirescu"
+  given-names: "Carol T."
+title: "On a conjecture of Faudree and Schelp"
+version: 1
+date-released: 2025-05-20
+url: "https://github.com/Computational-Graph-Theory-Group-Kulak/Counterexamles-to-a-conjecture-of-Faudree-and-Schelp.git"
