@@ -5,10 +5,10 @@ flags=-std=gnu11 -march=native -Wall -Wno-missing-braces
 64bit: hamcon.c readGraph/readGraph6.c bitset.h
 	$(compiler) -DUSE_64_BIT -o hamCon hamcon.c readGraph/readGraph6.c bitset.h $(flags) -O3
 
-hamconCycles: hamcon_cycles.c readGraph/readGraph6.c bitset.h
+cycles: hamcon_cycles.c readGraph/readGraph6.c bitset.h
 	$(compiler) -DUSE_64_BIT -o hamConCycles hamcon_cycles.c readGraph/readGraph6.c bitset.h $(flags) -O3
 
-hamconCyclesDebug: hamcon_cycles.c readGraph/readGraph6.c bitset.h
+cyclesDebug: hamcon_cycles.c readGraph/readGraph6.c bitset.h
 	$(compiler) -DUSE_64_BIT -o hamConCyclesDebug hamcon_cycles.c readGraph/readGraph6.c bitset.h $(flags) -fsanitize=address -g -pg
 
 paths: hamcon_paths.c readGraph/readGraph6.c bitset.h
@@ -27,8 +27,6 @@ gadgetDebug: hamconGadgets.c readGraph/readGraph6.c bitset.h
 fc: FaudreeSchelp.c readGraph/readGraph6.c bitset.h
 	$(compiler) -DUSE_64_BIT -o FaudreeSchelp FaudreeSchelp.c readGraph/readGraph6.c $(flags) -g -pg -fsanitize=address
 	
-all: 64bit hamconCycles
+all: path fc cycles
 
 .PHONY: clean
-clean:
-	rm -f hamCon

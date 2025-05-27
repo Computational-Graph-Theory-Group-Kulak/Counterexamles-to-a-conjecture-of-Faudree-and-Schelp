@@ -409,7 +409,7 @@ bool check_ham_conn_graph6(const char* graph_str, size_t* counter, size_t* check
     }
 
     bool is_interesting = false;
-    if(strcmp(interesting_criteria, "all") == 0){
+    if(strcmp(interesting_criteria, "any") == 0){
         is_interesting = true;
     
     }
@@ -483,7 +483,7 @@ bool check_ham_conn_graph6(const char* graph_str, size_t* counter, size_t* check
             }
         }
         }
-        if(strcmp(interesting_criteria, "full") == 0){
+        if(strcmp(interesting_criteria, "all") == 0){
          for (int i = 0; i < n; i++){
             for(int j = 0; j < i; j++){
                 cycles[i][j] = EMPTY;
@@ -507,6 +507,32 @@ bool check_ham_conn_graph6(const char* graph_str, size_t* counter, size_t* check
                             fprintf(stderr," of length: ");
                             fprintf(stderr,"%d",k);
                             fprintf(stderr,"\n");
+                        }
+                    }
+                
+            }
+        }
+        }
+
+        if(strcmp(interesting_criteria, "full") == 0){
+         for (int i = 0; i < n; i++){
+            for(int j = 0; j < i; j++){
+                cycles[i][j] = EMPTY;
+            }
+        }
+        
+        for(int i = n; i > 0; i--){
+            find_path_of_given_length(adj,n,i, cycles);
+        }
+    
+        
+    
+        is_interesting = true;
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < i; j++){
+                    for(int k = 1;k<n;k++){
+                        if(intersection(cycles[i][j], singleton(k)) == 0){
+                            is_interesting = false;
                         }
                     }
                 

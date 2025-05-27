@@ -29,7 +29,7 @@ The order of the arguments here is important.
 
 Usage: `bash faudreeSchelp_all.sh n plantri-args`
 
-Generates all hamiltonian-connected graphs 
+Generates all planar hamiltonian-connected graphs of a given order
 
 The order of the arguments here is important.
 ```
@@ -41,7 +41,7 @@ The order of the arguments here is important.
 
 Usage: `bash faudreeSchelp_any.sh n plantri-args`
 
-Generates all hamiltonian-connected graphs that are not k-uniformly connected for some k in {2...n-2}
+Generates all planar hamiltonian-connected graphs that are not k-uniformly connected for some k in {2...n-2}
 
 The order of the arguments here is important.
 ```
@@ -53,7 +53,7 @@ The order of the arguments here is important.
 
 Usage: `bash faudreeSchelp_full.sh n plantri-args`
 
-Generates all hamiltonian-connected graphs that are k-uniformly connected for all k in {2...n-2}
+Generates all planar hamiltonian-connected graphs that are k-uniformly connected for all k in {2...n-2}
 
 The order of the arguments here is important.
 ```
