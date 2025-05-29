@@ -7,9 +7,11 @@
 #include "readGraph/readGraph6.h"
 #include "bitset.h"
 /**
-using u 128
-*/
-///This is the main function
+ * hamcon_cycles.c
+ * 
+ * Author: Michiel provoost (michiel.provoost@kuleuven.be)
+ *
+ */
 
 
 

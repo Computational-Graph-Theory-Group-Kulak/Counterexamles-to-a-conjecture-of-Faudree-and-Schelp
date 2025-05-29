@@ -7,9 +7,11 @@
 #include "readGraph/readGraph6.h"
 #include "bitset.h"
 /**
-using u 128
-*/
-///This is the main function
+ * hamcon_paths.c
+ * 
+ * Author: Michiel provoost (michiel.provoost@kuleuven.be)
+ *
+ */
 
 
 
@@ -499,7 +501,7 @@ bool check_ham_conn_graph6(const char* graph_str, size_t* counter, size_t* check
         is_interesting = false;
         for(int i = 0; i < n; i++){
             for(int j = 0; j < i; j++){
-                    for(int k = 1;k<n;k++){
+                    for(int k = 2;k<n;k++){
                         if(intersection(cycles[i][j], singleton(k)) == 0){
                             is_interesting = true;
                             fprintf(stderr,"no path between: ");
@@ -530,7 +532,7 @@ bool check_ham_conn_graph6(const char* graph_str, size_t* counter, size_t* check
         is_interesting = true;
         for(int i = 0; i < n; i++){
             for(int j = 0; j < i; j++){
-                    for(int k = 1;k<n;k++){
+                    for(int k = 2;k<n;k++){
                         if(intersection(cycles[i][j], singleton(k)) == 0){
                             is_interesting = false;
                         }
